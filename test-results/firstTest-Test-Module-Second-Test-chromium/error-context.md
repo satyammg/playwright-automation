@@ -1,0 +1,125 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Press \"Enter\" to skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-container"
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - generic:
+          - navigation
+      - link "Practice Test Automation" [ref=e10] [cursor=pointer]:
+        - /url: https://practicetestautomation.com/
+        - img "Practice Test Automation" [ref=e11] [cursor=pointer]
+      - navigation [ref=e16]:
+        - navigation [ref=e17]:
+          - list [ref=e18]:
+            - listitem [ref=e19]:
+              - link "Home" [ref=e20] [cursor=pointer]:
+                - /url: https://practicetestautomation.com/
+            - listitem [ref=e21]:
+              - link "Practice" [ref=e22] [cursor=pointer]:
+                - /url: https://practicetestautomation.com/practice/
+            - listitem [ref=e23]:
+              - link "Courses" [ref=e24] [cursor=pointer]:
+                - /url: https://practicetestautomation.com/courses/
+            - listitem [ref=e25]:
+              - link "Blog" [ref=e26] [cursor=pointer]:
+                - /url: https://practicetestautomation.com/blog/
+            - listitem [ref=e27]:
+              - link "Contact" [ref=e28] [cursor=pointer]:
+                - /url: https://practicetestautomation.com/contact/
+    - main [ref=e29]:
+      - generic [ref=e30]:
+        - heading "Test login" [level=2] [ref=e31]
+        - list [ref=e32]:
+          - listitem [ref=e33]: This is a simple Login page. Students can use this page to practice writing simple positive and negative LogIn tests. Login functionality is something that most of the test automation engineers need to automate.
+          - listitem [ref=e34]:
+            - text: "Use next credentials to execute Login:"
+            - text: "Username:"
+            - generic [ref=e35]: student
+            - text: "Password:"
+            - generic [ref=e36]: Password123
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - generic [ref=e39]: Username
+            - textbox "Username" [ref=e40]
+          - generic [ref=e41]:
+            - generic [ref=e42]: Password
+            - textbox "Password" [ref=e43]
+          - button "Submit" [ref=e44] [cursor=pointer]
+        - generic [ref=e45]: Your username is invalid!
+        - separator [ref=e46]
+        - 'heading "Test case 1: Positive LogIn test" [level=5] [ref=e47]'
+        - list [ref=e48]:
+          - listitem [ref=e49]: Open page
+          - listitem [ref=e50]:
+            - text: Type username
+            - generic [ref=e51]: student
+            - text: into Username field
+          - listitem [ref=e52]:
+            - text: Type password
+            - generic [ref=e53]: Password123
+            - text: into Password field
+          - listitem [ref=e54]:
+            - text: Push
+            - generic [ref=e55]: Submit
+            - text: button
+          - listitem [ref=e56]:
+            - text: Verify new page URL contains
+            - generic [ref=e57]: practicetestautomation.com/logged-in-successfully/
+          - listitem [ref=e58]: Verify new page contains expected text ('Congratulations' or 'successfully logged in')
+          - listitem [ref=e59]:
+            - text: Verify button
+            - generic [ref=e60]: Log out
+            - text: is displayed on the new page
+        - separator [ref=e61]
+        - 'heading "Test case 2: Negative username test" [level=5] [ref=e62]'
+        - list [ref=e63]:
+          - listitem [ref=e64]: Open page
+          - listitem [ref=e65]:
+            - text: Type username
+            - generic [ref=e66]: incorrectUser
+            - text: into Username field
+          - listitem [ref=e67]:
+            - text: Type password
+            - generic [ref=e68]: Password123
+            - text: into Password field
+          - listitem [ref=e69]:
+            - text: Push
+            - generic [ref=e70]: Submit
+            - text: button
+          - listitem [ref=e71]: Verify error message is displayed
+          - listitem [ref=e72]:
+            - text: Verify error message text is
+            - generic [ref=e73]: Your username is invalid!
+        - separator [ref=e74]
+        - 'heading "Test case 3: Negative password test" [level=5] [ref=e75]'
+        - list [ref=e76]:
+          - listitem [ref=e77]: Open page
+          - listitem [ref=e78]:
+            - text: Type username
+            - generic [ref=e79]: student
+            - text: into Username field
+          - listitem [ref=e80]:
+            - text: Type password
+            - generic [ref=e81]: incorrectPassword
+            - text: into Password field
+          - listitem [ref=e82]:
+            - text: Push
+            - generic [ref=e83]: Submit
+            - text: button
+          - listitem [ref=e84]: Verify error message is displayed
+          - listitem [ref=e85]:
+            - text: Verify error message text is
+            - generic [ref=e86]: Your password is invalid!
+    - contentinfo:
+      - generic [ref=e88]:
+        - text: © Copyright 2020
+        - link "Practice Test Automation." [ref=e89] [cursor=pointer]:
+          - /url: https://practicetestautomation.com/
+        - text: All rights reserved |
+        - link "Privacy Policy" [ref=e90] [cursor=pointer]:
+          - /url: https://practicetestautomation.com/privacy-policy/
+```
