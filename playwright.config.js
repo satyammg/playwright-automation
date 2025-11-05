@@ -26,9 +26,11 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+    screenshot:"only-on-failure",
+    // video:"retain-on-failure",
     video:'off',
     launchOptions:{
-      slowMo:1000
+      slowMo:500
     },
 
     /* Base URL to use in actions like `await page.goto('/')`. */
